@@ -10,3 +10,52 @@ buildNumber.properties
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
 !/.mvn/wrapper/maven-wrapper.jar
+
+# top level conf directory
+conf
+
+# all eclipse generated files
+.classpath
+.project
+**/.classpath
+**/**/.classpath
+**/.project
+**/**/.project
+.settings
+**/.settings
+**/**/.settings
+
+# all IntelliJ generated files
+.idea
+**/.idea
+**/**/.idea
+
+*.iml
+**/*.iml
+**/**/*.iml
+
+*.eml
+**/*.eml
+**/**/*.eml
+
+bin/
+
+# all swap files
+*.swp
+**/*.swp
+**/**/*.swp
+
+# unit test output files
+**/testFiles/output
+**/**/testFiles/output
+
+# build artifacts
+**/target
+**/**/target
+
+# build.info? files
+**/build.info
+**/**/build.info
+
+/target/
+

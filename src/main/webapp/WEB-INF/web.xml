@@ -1,0 +1,44 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>File Upload Download Servlet</display-name>
+
+  <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>org.ptp.data.servlet.FileUploadServlet</servlet-class>
+    <init-param>
+      <param-name>baseDir</param-name>
+      <param-value>/Users/andrew/devel/data/twitter</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet>
+    <servlet-name>downloadServlet</servlet-name>
+    <servlet-class>org.ptp.data.servlet.FileDownloadServlet</servlet-class>
+    <init-param>
+      <param-name>baseDir</param-name>
+      <param-value>/opt/data/twitter</param-value>
+    </init-param>
+    <init-param>
+      <param-name>hdfsDir</param-name>
+      <param-value>/user/andrew/data/</param-value>
+    </init-param>
+    <init-param>
+      <param-name>coresite</param-name>
+      <param-value>/usr/local/hadoop/hadoop/etc/hadoop/core-site.xml</param-value>
+    </init-param>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/upload</url-pattern>
+  </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>downloadServlet</servlet-name>
+    <url-pattern>/download</url-pattern>
+  </servlet-mapping>
+
+</web-app>
